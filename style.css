@@ -1,0 +1,245 @@
+h1{
+    color:rgba(255,0,0,0.8);
+    font-size:36px;
+    font-style: italic;
+    text-align:center;
+    animation-name:colorAnimate;
+    animation-duration:0.25s;
+    animation-delay:10ms;
+    animation-iteration-count:infinite;
+}
+h6{
+    font-size:40px;
+    font-style:oblique;
+    text-align:center;
+    color:darkcyan;
+    animation:yug 1.12s infinite;
+}
+@keyframes yug{
+    from{
+        color:darkcyan;
+    }
+    to{
+        color:darkorange;
+    }
+}
+
+h5{
+    font-size:36px;
+    font-weight:550;
+    font-style:oblique;
+    text-align:center;
+    color:rgba(139,128,0,1);
+}
+h4{
+    font-weight:450;
+    color:darkmagenta;
+    font-style:italic;
+    font-size:35px;
+    text-align:center;
+    animation: scale-down 3s infinite;
+}
+@keyframes scale-down{
+    50%{
+        transform:rotate(360deg) scale(0.5);
+        bottom:22px;
+    }
+}
+body{
+    background-color:aquamarine;
+}
+p{
+    font-size:30px;
+}
+h2{
+    text-align:center;
+    text-decoration:underline;
+    color:blue;
+}
+h3{
+    text-align:center;
+    color:blueviolet;
+    font-size:24px;
+}
+@keyframes colorAnimate{
+    from{color:red;}
+    to{color:royalblue;}
+}
+*,
+*:before,
+*:after{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+.container{
+    height:500px;
+    width:500px;
+    position:absolute;
+    transform:translate(-50%, -50%);
+    top:37%;
+    left:85%;
+}
+.diya{
+    height:150px;
+    width:300px;
+    background-color: #fdcf0f;
+    border-radius: 0 0 150px 150px;
+    position:absolute;
+    margin:auto;
+    left:0;
+    right:0;
+    bottom:50px;
+    overflow:hidden;
+}
+.inside{
+    width:300px;
+    height:60px;
+    background-color:#fd500a;
+    border-radius: 50%;
+    position:absolute;
+    margin:auto;
+    left:0;
+    right:0;
+    bottom:170px;
+}
+.shadow{
+    height:60px;
+    width:320px;
+    position:absolute;
+    bottom:170px;
+    border-radius: 50%;
+    margin:auto;
+    left:0;
+    right:0;
+}
+.flame{
+    height:170px;
+    width:170px;
+    background-color:#fdf1c2;
+    border-radius:160px 0;
+    transform:rotate(-45deg);
+    position:absolute;
+    margin:auto;
+    left:0;
+    right:0;
+    bottom:36px;
+    animation:scale-up 2s infinite;
+}
+@keyframes scale-up{
+    50%{
+        transform:rotate(-45deg) scale(1.05);
+        bottom:42px;
+    }
+}
+.flame:after{
+    content:"";
+    position:absolute;
+    height:120px;
+    width:120px;
+    background-color:#f4c631;
+    border-radius:120px 0;
+    position:absolute;
+    bottom:0;
+}
+.light{
+    height:330px;
+    width:330px;
+    background-color:rgba(253,241,194,0.2);
+    border-radius:50%;
+    position:absolute;
+    left:-15px;
+    bottom:0;
+}
+.light:before,
+.light:after{
+    content:"";
+    position:absolute;
+    height:120px;
+    width:120px;
+    background-color:rgba(253,241,194,0.2);
+    border-radius:50%;
+    animation:shine 5s linear infinite;
+}
+@keyframes shine{
+    50%{
+        transform:scale(0.7);
+        opacity:0.2;
+    }
+}
+.light:before{
+    bottom:30px;
+    right:60px;
+}
+.light:after{
+    top:50px;
+    left:80px;
+    animation-delay:1s;
+}
+.line1,
+.line2{
+    position:absolute;
+    height:60px;
+    width:320px;
+    border:none;
+    border-bottom: 8px solid #ffffff;
+    border-radius:50%;
+    left:-10px;
+}
+.line2{
+    top:60px;
+}
+.dots{
+    height:60px;
+    width:320px;
+    border:none;
+    border-bottom:10px dotted #fd500a;
+    position:absolute;
+    border-radius:50%;
+    top:30px;
+    left:-10px;
+}
+#slider{
+    overflow:hidden;
+}
+#slider figure{
+    position:relative;
+    width:500%;
+    margin:0;
+    left:0;
+    animation:10s slider infinite;
+}
+#slider figure img{
+    float:left;
+    width:20%;
+}
+@keyframes slider{
+    0%{
+        left:0;
+    }
+    20%{
+        left:0;
+    }
+    25%{
+        left:-100%;
+    }
+    45%{
+        left:-100%;
+    }
+    50%{
+        left:-200%;
+    }
+    70%{
+        left:-200%;
+    }
+    75%{
+        left:-300%;
+    }
+    95%{
+        left:-300%;
+    }
+    100%{
+        left:-300%
+    }
+}
+
